@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="25dp"
+    android:gravity="center"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/temperatureLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/temperature"
+        android:textSize="18sp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="4dp"
+        android:layout_alignParentLeft="true" />
+
+    <EditText
+        android:id="@+id/temperatureField"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/temperatureLabel"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_toEndOf="@id/temperatureLabel"
+        android:layout_toRightOf="@id/temperatureLabel"
+        android:autofillHints=""
+        android:inputType="numberDecimal"
+        android:textSize="18sp"
+        tools:ignore="LabelFor,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+    <TextView
+        android:id="@+id/fromLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/from"
+        android:textSize="18sp"
+        android:layout_below="@id/temperatureLabel"
+        android:layout_alignStart="@id/temperatureLabel"
+        android:layout_alignLeft="@id/temperatureLabel"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"/>
+
+    <Spinner
+        android:id="@+id/fromSpinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fromLabel"
+        android:layout_alignStart="@id/fromLabel"
+        android:layout_alignLeft="@id/fromLabel"
+        android:layout_alignEnd="@id/temperatureField"
+        android:layout_alignRight="@id/temperatureField"
+        android:layout_marginTop="4dp"
+        android:backgroundTint="#FF9800"
+        android:minHeight="48dp"
+        android:spinnerMode="dropdown"
+        android:textSize="18sp"
+        tools:targetApi="lollipop" />
+
+    <!-- To Label and Spinner -->
+    <TextView
+        android:id="@+id/toLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/to"
+        android:textSize="18sp"
+        android:layout_below="@id/fromSpinner"
+        android:layout_alignStart="@id/fromSpinner"
+        android:layout_alignLeft="@id/fromSpinner"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"/>
+
+    <Spinner
+        android:id="@+id/toSpinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toLabel"
+        android:layout_alignStart="@id/toLabel"
+        android:layout_alignLeft="@id/toLabel"
+        android:layout_alignEnd="@id/fromSpinner"
+        android:layout_alignRight="@id/fromSpinner"
+        android:layout_marginTop="4dp"
+        android:backgroundTint="#FF9800"
+        android:minHeight="48dp"
+        android:spinnerMode="dropdown"
+        android:textSize="18sp"
+        tools:targetApi="lollipop" /> <!-- Orange color for spinner -->
+
+    <!-- Convert Button -->
+    <Button
+        android:id="@+id/convertButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toSpinner"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#4CAF50"
+        android:text="@string/convert"
+        android:textColor="#263238"
+        android:textSize="18sp"
+        tools:targetApi="lollipop" />
+    <TextView
+        android:id="@+id/resultLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/result"
+        android:textSize="18sp"
+        android:layout_below="@id/convertButton"
+        android:layout_alignStart="@id/convertButton"
+        android:layout_alignLeft="@id/convertButton"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"/>
+
+    <TextView
+        android:id="@+id/resultField"
+        android:layout_width="174dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/resultLabel"
+        android:layout_alignStart="@id/resultLabel"
+        android:layout_alignLeft="@id/resultLabel"
+        android:layout_alignEnd="@id/convertButton"
+        android:layout_alignRight="@id/convertButton"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="-62dp"
+        android:layout_marginRight="-62dp"
+        android:textSize="35sp"
+        android:textStyle="bold"
+       android:textColor="#FF0000" />
+</RelativeLayout>
